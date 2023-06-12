@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int n;
+	cin>>n;
+	for(int row = 1; row<=n; row++){
+		//spaces --> 
+		int spaces = n-row;
+		for(int i =1; i<=spaces; i++)
+		cout<<'\t';
+
+		int val = 1;
+		for(int i = 1; i<=row; i++){
+			if(i!=row)
+			cout<<val<<'\t'<<'\t';
+			else
+			cout<<val<<' ';
+			val = val*((row-1)-i + 1)/i;
+		}
+		cout<<endl;
+	}
+	return 0;
+}
